@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Quick Game</h1>
+        <h1>Click On The Threats We Are Facing</h1>
+        <h1 id="score"></h1>
+        <img src="game-assests/climate-change.png" onclick="clime()" id="clime"/>
+        <img src="game-assests/cycling.png" onclick="cycle()" id="cycle"/>
+        <img src="game-assests/environment.png" onclick="envi()" id="envi"/>
+        <img src="game-assests/planting-trees.png" onclick="plant()" id="plant"/>
+        <img src="game-assests/poverty.png" onclick="poverty()" id="poverty"/>
+      </div>
+
+      <script>
+        let score=0;
+
+        function updatescore(){
+            document.getElementById('score').textContent=score
+        }
+        setInterval(updatescore, 500)
+        function clime(){
+        document.getElementById('clime').style.opacity=0;
+        score+=1
+        }
+        function cycle(){
+        document.getElementById('cycle').style.opacity=0;
+        score-=1
+        }
+        function envi(){
+        document.getElementById('envi').style.opacity=0;
+        score+=1
+        }
+        function plant(){
+        document.getElementById('plant').style.opacity=0;
+        score-=1
+        }
+        function poverty(){
+        document.getElementById('poverty').style.opacity=0;
+        score+=1
+        }
+      </script>
+</body>
+</html>
